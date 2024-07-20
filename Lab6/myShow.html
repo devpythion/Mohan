@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Login - MyShow</title>
+    <script>
+        function CheckValidity() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var valid = true;
+
+            if (username.length < 4) {
+                alert('Username must be at least 4 characters long.');
+                valid = false;
+            }
+
+            if (password.length < 4) {
+                alert('Password must be at least 4 characters long.');
+                valid = false;
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" onchange="CheckValidity()"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"onchange="CheckValidity()"><br>
+        <button><a href="/JSDOM/registration.html">Submit</a></button>
+    </form>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShow Service</title>
+    <script type="text/javascript">
+        function checkValidity(element){
+            var username = document.querySelector("input[name=username]");
+            var pwd = document.querySelector("input[name=password]");
+            if (username.value.length < 4){
+                alert("At least 4 characters are required");
+            }
+            if (pwd.value.length < 4){
+                alert("At least 4 characters are required");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form action="#">
+        <label for="username">Username</label>
+        <input type="text" name="username" onchange="checkValidity(this)" />
+        <label for="password">Password</label>
+        <input type="password" name="password" />
+        <input type="submit" value="Login" >
+    </form>
+</body>
+</html> -->
